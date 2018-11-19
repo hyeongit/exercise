@@ -1,0 +1,20 @@
+{
+  "name": "exercise",
+  "version": "1.0.0",
+  "description": "asdfasdf\r hello\r hi",
+  "main": "index.js",
+  "scripts": {
+    "start": "node run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyeongit/exercise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyeongit/exercise/issues"
+  },
+  "homepage": "https://github.com/hyeongit/exercise#readme"
+}
