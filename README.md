@@ -1,3 +1,4 @@
 # exercise
 asdfasdf
-hello 
+hello
+hi
