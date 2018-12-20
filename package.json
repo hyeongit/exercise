@@ -1,20 +1,21 @@
 {
-  "name": "exercise",
-  "version": "1.0.0",
-  "description": "asdfasdf\r hello\r hi",
+  "name": "tfjs-examples-mnist-node",
+  "version": "0.1.0",
+  "description": "",
   "main": "index.js",
+  "license": "Apache-2.0",
+  "private": true,
+  "engines": {
+    "node": ">=8.11.0"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^0.1.20",
+    "argparse": "^1.0.10"
+  },
   "scripts": {
-    "start": "node run"
+    "postinstall": "yarn upgrade --pattern @tensorflow"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hyeongit/exercise.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hyeongit/exercise/issues"
-  },
-  "homepage": "https://github.com/hyeongit/exercise#readme"
+  "devDependencies": {
+    "clang-format": "~1.2.2"
+  }
 }
