@@ -1,9 +1,16 @@
-/*var data = "";
-var a;
-for (var i = 0; i < 32; i++) {
-  functAry[i] = Math.sin(((2 * Math.PI) / 31) * (i));
-  a = String(functAry[i]);
-  data += a + "\r\n";
+/*
+writedown an array of 64 values of sine waveform which starts from zero point and is arranged at same intervals in text file.
+*/
+let data = "";
+const functAry = new Array();
+
+{
+  let a;
+  for (let i = 0; i < 64; i++) {
+    functAry[i] = Math.sin(((2 * Math.PI) / 63) * i);
+    a = String(functAry[i]);
+    data += a + "\r\n";
+  }
 }
 
 const fs = require("fs");
@@ -13,24 +20,23 @@ fs.writeFile("J Son is a god.txt", data, function(error, data) {
   }
   console.log("write is completed");
 });
-*/
 
-var b;
-var funcAry = new Array();
-for (var i = 0; i < 64; i++) {
-  funcAry[i] = Math.sin(((2 * Math.PI) / 63) * i);
-}
+//fft caculation
 
+/*
 var fft = require("fft-js").fft,
   fftUtil = require("fft-js").util,
-  signal = funcAry;
+*/
 
-var phasors = fft(signal);
+const { fft, util: fftUtil } = require("fft-js");
+const signal = functAry;
 
-var frequencies = fftUtil.fftFreq(phasors, 8000), // Sample rate and coef is just used for length, and frequency step
-  magnitudes = fftUtil.fftMag(phasors);
+const phasors = fft(signal);
 
-var both = frequencies.map(function(f, ix) {
+const frequencies = fftUtil.fftFreq(phasors, 8000); // Sample rate and coef is just used for length, and frequency step
+const magnitudes = fftUtil.fftMag(phasors);
+
+const both = frequencies.map(function(f, ix) {
   return { frequency: f, magnitude: magnitudes[ix] };
 });
 
